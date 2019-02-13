@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 require('./hbs/helpers');
 const app = express()
-
+const port = process.env.PORT;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -25,4 +25,4 @@ app.get('/about', function(req, res) {
     });
 })
 
-app.listen(3000)
+app.listen(port)
